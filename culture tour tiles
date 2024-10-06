@@ -1,0 +1,62 @@
+import Image from 'next/image'
+
+const tiles = [
+  {
+    title: "Heritage of India",
+    description: "The heritage of India is a vibrant blend of cultures, traditions, and artistic expressions shaping identity",
+    image: "/placeholder.svg?height=150&width=150"
+  },
+  {
+    title: "Culture & Tradition",
+    description: "Shaping identity, values, and expressions through shared practices and beliefs across generations",
+    image: "/placeholder.svg?height=150&width=150"
+  },
+  {
+    title: "Ticket-Booking",
+    description: "Seamless travel planning, instant confirmations, and flexible options for a hassle-free experience",
+    image: "/placeholder.svg?height=150&width=150"
+  },
+  {
+    title: "e-comerce",
+    description: "E-commerce: Transforming shopping experiences with convenience, variety, and accessibility",
+    image: "/placeholder.svg?height=150&width=150"
+  },
+  {
+    title: "Puzzels",
+    description: "Engaging minds through challenging problems that promote critical thinking and problem-solving skills.",
+    image: "/placeholder.svg?height=150&width=150"
+  },
+  {
+    title: "Virtual Gallery",
+    description: "Immersive online experiences showcasing art and culture, transcending geographical boundaries for all",
+    image: "/placeholder.svg?height=150&width=150"
+  }
+]
+
+export default function CultureTour() {
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-2">Culture Tour</h1>
+      <p className="text-xl text-gray-600 mb-8">Subheading</p>
+      <div className="grid grid-cols-3 gap-6">
+        {tiles.map((tile, index) => (
+          <div key={index} className="bg-white border rounded-lg overflow-hidden shadow-md flex flex-col">
+            <div className="p-4 flex flex-col items-center">
+              <h2 className="text-lg font-semibold mb-3 text-center">{tile.title}</h2>
+              <div className="relative w-full h-40 mb-3">
+                <Image
+                  src={tile.image}
+                  alt={tile.title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-md"
+                />
+              </div>
+              <p className="text-sm text-gray-600 text-center">{tile.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
