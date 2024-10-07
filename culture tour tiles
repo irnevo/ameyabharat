@@ -1,62 +1,152 @@
-import Image from 'next/image'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture Tour</title>
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-const tiles = [
-  {
-    title: "Heritage of India",
-    description: "The heritage of India is a vibrant blend of cultures, traditions, and artistic expressions shaping identity",
-    image: "/placeholder.svg?height=150&width=150"
-  },
-  {
-    title: "Culture & Tradition",
-    description: "Shaping identity, values, and expressions through shared practices and beliefs across generations",
-    image: "/placeholder.svg?height=150&width=150"
-  },
-  {
-    title: "Ticket-Booking",
-    description: "Seamless travel planning, instant confirmations, and flexible options for a hassle-free experience",
-    image: "/placeholder.svg?height=150&width=150"
-  },
-  {
-    title: "e-comerce",
-    description: "E-commerce: Transforming shopping experiences with convenience, variety, and accessibility",
-    image: "/placeholder.svg?height=150&width=150"
-  },
-  {
-    title: "Puzzels",
-    description: "Engaging minds through challenging problems that promote critical thinking and problem-solving skills.",
-    image: "/placeholder.svg?height=150&width=150"
-  },
-  {
-    title: "Virtual Gallery",
-    description: "Immersive online experiences showcasing art and culture, transcending geographical boundaries for all",
-    image: "/placeholder.svg?height=150&width=150"
-  }
-]
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
 
-export default function CultureTour() {
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-2">Culture Tour</h1>
-      <p className="text-xl text-gray-600 mb-8">Subheading</p>
-      <div className="grid grid-cols-3 gap-6">
-        {tiles.map((tile, index) => (
-          <div key={index} className="bg-white border rounded-lg overflow-hidden shadow-md flex flex-col">
-            <div className="p-4 flex flex-col items-center">
-              <h2 className="text-lg font-semibold mb-3 text-center">{tile.title}</h2>
-              <div className="relative w-full h-40 mb-3">
-                <Image
-                  src={tile.image}
-                  alt={tile.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-md"
-                />
-              </div>
-              <p className="text-sm text-gray-600 text-center">{tile.description}</p>
+        /* Tiles Container */
+        .tiles-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Tile Styles */
+        .tile {
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .tile img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .tile-content {
+            padding: 20px;
+        }
+
+        .tile-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .tile-text {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .tile-link {
+            text-decoration: none;
+            color: #337ab7;
+        }
+
+        .tile-link:hover {
+            color: #23527c;
+        }
+    </style>
+</head>
+<body>
+    <div class="tiles-container">
+        <!-- Tile 1 -->
+        <div class="tile">
+            <img src="https://source.unsplash.com/random/400x300/?woman,india" alt="Heritage of India">
+            <div class="tile-content">
+                <h2 class="tile-title">Heritage of India</h2>
+                <p class="tile-text">The heritage of India is a vibrant blend of cultures, traditions, and artistic expressions shaping identity.</p>
+                <a href="#" class="tile-link">Learn More</a>
             </div>
-          </div>
-        ))}
-      </div>
+        </div>
+
+        <!-- Tile 2 -->
+        <div class="tile">
+            <img src="https://source.unsplash.com/random/400x300/?tabla,music" alt="Culture & Tradition">
+            <div class="tile-content">
+                <h2 class="tile-title">Culture & Tradition </h2>
+                <p class="tile-text">The rich cultural heritage of India is reflected in its diverse traditions, customs, and practices.</p>
+                <a href="#" class="tile-link">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Tile 3 -->
+        <div class="tile">
+            <img src="https://source.unsplash.com/random/400x300/?dance,india" alt="Dance & Music">
+            <div class="tile-content">
+                <h2 class="tile-title">Dance & Music</h2>
+                <p class="tile-text">Indian classical music and dance forms like Bharatanatyam, Kathakali, and Odissi are an integral part of Indian culture.</p>
+                <a href="#" class="tile-link">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Tile 4 -->
+        <div class="tile">
+            <img src="https://source.unsplash.com/random/400x300/?food,india" alt="Food & Cuisine">
+            <div class="tile-content">
+                <h2 class="tile-title">Food & Cuisine</h2>
+                <p class="tile-text">Indian cuisine is a diverse and vibrant reflection of the country's cultural heritage, with a wide range of dishes and flavors.</p>
+                <a href="#" class="tile-link">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Tile 5 -->
+        <div class="tile">
+            <img src="https://source.unsplash.com/random/400x300/?festival,india" alt="Festivals & Celebrations">
+            <div class="tile-content">
+                <h2 class="tile-title">Festivals & Celebrations</h2>
+                <p class="tile-text">India is a land of festivals, with numerous celebrations throughout the year, each with its own unique traditions and customs.</p>
+                <a href="#" class="tile-link">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Tile 6 -->
+        <div class="tile">
+            <img src="https://source.unsplash.com/random/400x300/?yoga,india" alt="Yoga & Wellness">
+            <div class="tile-content">
+                <h2 class="tile-title">Yoga & Wellness</h2>
+                <p class="tile-text">Yoga, an ancient Indian practice, is a holistic approach to physical, mental, and spiritual well-being.</p>
+                <a href="#" class="tile-link">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Virtual Gallery Tile -->
+        <div class="tile">
+            <img src="https://source.unsplash.com/random/400x300/?art,gallery" alt="Virtual Gallery">
+            <div class="tile-content">
+                <h2 class="tile-title">Virtual Gallery</h2>
+                <p class="tile-text">Explore the rich cultural heritage of India through a virtual gallery, showcasing art, history, and traditions.</p>
+                <a href="#" class="tile-link">Learn More</a>
+            </div>
+        </div>
     </div>
-  )
-}
+</body>
+</html>
+
