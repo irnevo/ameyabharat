@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ameya Bharat</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .back-button {
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .search-bar input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .header .search-bar button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .content {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .dish-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .dish-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .dish-card .dish-info {
+            padding: 20px;
+        }
+
+        .dish-card h2 {
+            margin-top: 0;
+        }
+
+        .dish-card p {
+            margin-bottom: 10px;
+        }
+
+        .dish-card .recipe-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="#" class="back-button">&#8592;</a>
+        <div class="search-bar">
+            <input type="text" placeholder="search dish">
+            <button>search</button>
+        </div>
+    </div>
+    <div class="content">
+        <div class="dish-card">
+            <img src="puran_poli.jpg" alt="Puran Poli">
+            <div class="dish-info">
+                <h2>Puran Poli</h2>
+                <h3>Subheading</h3>
+                <p>Puran Poli is a traditional Indian flatbread, especially popular in Maharashtra and Karnataka, known for
+                    its delicious sweet filling. Made during festivals like Holi and Gudi Padwa, this delectable dish
+                    features a dough made from wheat flour, which is rolled out and filled with a mixture of chana dal
+                    (split chickpeas), jaggery, and cardamom. The combination is then expertly folded and cooked on a hot
+                    griddle until golden brown. Puran Polis often served with a dollop of ghee or milk, enhancing its
+                    rich flavor. This sweet treat not only satisfies the taste buds but also symbolizes the joy of
+                    celebration and the warmth of home-cooked meals, making it a cherished part of Indian culinary
+                    heritage.</p>
+                <a href="#" class="recipe-button">Recipe</a>
+            </div>
+        </div>
+        <div class="dish-card">
+            <img src="vada_pav.jpg" alt="V ada Pav">
+            <div class="dish-info">
+                <h2>Vada Pav</h2>
+                <h3>The Perfect Blend of Spices and Comfort</h3>
+                <p>Vada Pav is a beloved street food originating from Mumbai, often referred to as the city's signature
+                    snack. This delicious dish consists of a spiced potato patty, known as vada, encased in a soft bread
+                    roll called pav. The potato filling is seasoned with garlic, green chilies, and various spices, creating
+                    a flavorful bite. Typically served with chutneys—like green chutney and sweet tamarind
+                    chutney—alongside fried green chilies, Vada Pav is both a filling snack and a quick meal. Its
+                    popularity extends beyond Mumbai, symbolizing the vibrant street food culture of India. With its
+                    unique blend of textures and flavors, Vada Pav captures the essence of urban culinary innovation and
+                    the joy of communal dining.</p>
+                <a href="#" class="recipe-button">Recipe</a>
+            </div>
+        </div>
+        <div class="dish-card">
+            <img src="bhakri.jpg" alt="Bhakri">
+            <div class="dish-info">
+                <h2>Bhakri</h2>
+                <h3>A Rustic Delight from Western India</h3>
+                <p>Bhakri is a traditional Indian flatbread, particularly cherished in Maharashtra and Gujarat. Made from
+                    whole wheat, jowar (sorghum), or bajra (pearl millet) flour, this unleavened bread is known for its
+                    hearty and wholesome characteristics. The preparation involves mixing the flour with water to form a
+                    dough, which is then hand-rolled and cooked on a hot griddle or clay stove until it develops a slightly
+                    crispier exterior and a soft interior. Bhakri is often enjoyed with spicy chutneys, curries, or ghee,
+                    making it a versatile accompaniment to various meals. Its rustic flavor and texture reflect the
+                    agricultural heritage of the region, and it serves as a symbol of comfort food, celebrating the
+                    simplicity and richness of traditional Indian cuisine.</p>
+                <a href="#" class="recipe-button">Recipe</a>
+            </div>
+        </div>
+        <div class="dish-card">
+            <img src="modak.jpg" alt="Modak">
+            <div class="dish-info">
+                <h2>Modak</h2>
+                <h3>Divine Sweet Treat from Maharashtra</h3>
+                <p>Modak is a traditional Indian sweet, especially popular in Maharashtra, celebrated as a favorite
+                    offering to Lord Ganesha during festivals like Ganesh Chaturthi. These delightful dumplings are
+                    made from rice flour or wheat flour and are typically filled with a sweet mixture of grated coconut
+                    and jaggery, flavored with cardamom. The process of shaping modaks is an art in itself, as they are
+                    carefully crafted into a distinctive conical shape, symbolizing a modak (pleat). Steamed or fried,
+                    modaks are not only a treat for the palate but also carry deep cultural significance, representing
+                    abundance and joy. Their exquisite taste and beautiful presentation make modaks a cherished
+                    delicacy, reflecting the rich culinary traditions of India.</p>
+                <a href="#" class="recipe-button">Recipe</a>
+            </div>
+        </div>
+        <div class="dish-card">
+            <img src="misal_pav.jpg" alt="Misal Pav">
+            <div class="dish-info">
+                <h2>Misal Pav</h2>
+                <h3>The Spicy Street Food Marvel of Maharashtra</h3>
+                <p>Misal Pav is a renowned street food dish from Maharashtra, celebrated for its bold flavors and vibrant
+                    presentation. This spicy curry is made from a mixture of sprouted lentils, typically matki (moth
+                    beans), cooked with an array of spices, onions, and tomatoes. The dish is topped with crunchy
+                    farsan (savory snacks), chopped onions, and fresh coriander, creating a delightful contrast in textures.
+                    Served alongside soft bread rolls known as pav, Misal Pav offers a hearty and fulfilling meal. It
+                    is often enjoyed with a squeeze of lime and a side of buttermilk, enhancing its refreshing taste. This
+                    dish not only showcases the rich culinary heritage of Maharashtra but also embodies the spirit of
+                    communal eating, making it a favorite among food lovers.</p>
+                <a href="#" class="recipe-button">Recipe</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
